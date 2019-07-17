@@ -1,16 +1,14 @@
 import React from 'react';
+import vschoolProducts from './components/vschoolProducts'
 
 import "./index"
 
 import './App.css';
-import TodoItem from "./components/TodoItem"
+import TodoItems from "./components/TodoItems"
 function App() {
     return (
       <div className="todo-list">
-        <TodoItem/>
-        <TodoItem/>
-        <TodoItem/>
-        <TodoItem/>
+        <TodoItems/>
       </div>
     );
     }
