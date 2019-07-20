@@ -1,16 +1,23 @@
-import React from 'react';
-import vschoolProducts from './components/vschoolProducts'
+import React, {Component} from "react"
+import TodoItem from "./components/TodoItem"
+import todosData from "./components/todosData"
 
-import "./index"
-
-import './App.css';
-import TodoItems from "./components/TodoItems"
-function App() {
+class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      todos:todosData
+    }
+  }
+  render(){
+    const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item}/>)
+    
     return (
       <div className="todo-list">
-        <TodoItems/>
-      </div>
-    );
-    }
+            {todoItems}
+        </div>
+    )
+  }
+}
 
-export default App;
+export default App
