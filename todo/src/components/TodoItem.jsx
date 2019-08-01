@@ -1,15 +1,10 @@
-import React from 'react'
+import React from "react"
 
 function TodoItem(props) {
-    // console.log(product);
-    const product = props.product
-    
     return (
-        <div>
-            <p>id: {product.id}</p>
-            <p>name: {product.name}</p>
-            <p>price: {product.price}</p>
-            <p>description: {product.description}</p>
+        <div className="todo-item">
+            <input type="checkbox" checked={props.item.completed}/>
+            <p>{props.item.text}</p>
         </div>
     )
 }
