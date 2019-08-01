@@ -6,7 +6,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Header username = 'vschool' />
+                <Header username='vschool' />
                 <Greeting />
             </div>
         )
@@ -15,22 +15,22 @@ class App extends Component {
 
 // #2
 class Header extends Component {
-    render(){
-    return(
-        <header >
-            <p>Welcome, {this.props.username}!</p>
-        </header >
-    )
+    render() {
+        return (
+            <header >
+                <p>Welcome, {this.props.username}!</p>
+            </header >
+        )
     }
 }
 
 // #3
 class Greeting extends Component {
-    render(){
+    render() {
         const date = new Date()
         const hours = date.getHours()
         let timeOfDay
-    
+
         if (hours < 12) {
             timeOfDay = "morning"
         } else if (hours >= 12 && hours < 17) {
