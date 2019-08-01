@@ -15,9 +15,7 @@ class App extends Component {
             <div>
                 <h1>{this.state.name}</h1>
                 <h3><font color="#3AC1EF">▍{this.state.age} years old</font></h3>
-                <div>
-                    <h1>You are currently logged {this.state.answer ? 'in':'out'}</h1>
-                </div>
+                <h1>You are currently logged {this.state.answer ? 'in':'out'}</h1>
             </div>
         )
     }
