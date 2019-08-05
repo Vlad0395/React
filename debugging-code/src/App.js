@@ -1,36 +1,33 @@
-import React, { Component } from "react";
-
+import React, { Component } from "react"
 
 class App extends Component {
     constructor() {
         super()
         this.state = {
-            name: 'Vlad',
-            age: 24,
-            answer: false
+            character: {},
+            loading: false
         }
     }
+
+    componentDidMount() {
+        this.setState({ loading: true })
+        
+        fetch("https://swapi.co/api/people/1")
+            .then(response => response.json())
+            .then(data => this.setState({
+                loading:false,
+                character: data
+            }))
+    }
+
     render() {
+        const text = this.state.loading ? "Loading..." : this.state.character.name
         return (
-            // <div>
-            //     <h1>{this.state.name}</h1>
-            //     <h3><font color="#3AC1EF">▍{this.state.age} years old</font></h3>
-            //     <h1>You are currently logged {this.state.answer ? 'in':'out'}</h1>
-            // </div>
             <div>
-                <img src="https://www.fillmurray.com/200/150" onMouseOver={()=>console.log('I was over')}/>
-                <br />
-                <span>I is text {this.state.age}</span>
-                <br />
-                <button onClick={()=>this.setState({age:this.state.age + 1})}>Click me</button>
+                <p>{text}</p>
             </div>
         )
     }
 }
 
 export default App
-
-
-
-
-
