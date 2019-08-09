@@ -80,3 +80,5 @@
                 name: 'Card'
             }
         ]
+
+export default Cards

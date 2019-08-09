@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
-import Card from "./ComponentCard"
+import Cards from "./ComponentCard"
+import Card from "./Card"
 import '../index.css'
 class Container extends Component {
     render() {
-     Card.map( card=>{
-        return (
-            <Card id={card.id} punchLine={card.name} />
-            )
-     })
+        const Cardd = Cards.map(card => <Card key = {card.id} name = {card.name}/>)
+        return(
+            {Cardd}
+            
+        )
     }
-}
+    }
+
 
 export default Container
