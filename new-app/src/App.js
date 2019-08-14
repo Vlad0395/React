@@ -1,20 +1,12 @@
 import React from 'react';
-import Card from './components/Card'
-import ComponentCard from './components/ComponentCard'
-import Header from './components/Header'
+import Router from './routes/index'
 import './App.css';
 import './index.css';
 
 function App() {
-    const Cards = ComponentCard.map(joke => <Card className ="card" key ={joke.id} name={joke.name}/>)
-  
+    // const Cards = ComponentCard.map(joke => <Card className ="card" key ={joke.id} name={joke.name} id={joke.id}/>)
     return (
-        <div>
-        <Header/>
-        <div className = "container">
-            {Cards} 
-        </div>
-    </div>
+        <Router/>       
     )
 }
 

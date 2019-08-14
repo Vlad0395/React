@@ -1,7 +1,9 @@
         const Cards = [
             {
                 id: 1,
-                name: 'Card'
+                name: 'Card',
+                description:'this is description',
+                img:'url'
             },
             {
                 id: 2,
