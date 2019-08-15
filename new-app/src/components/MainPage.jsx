@@ -6,6 +6,8 @@ import Header from './Header'
 
 function MainPage() {
     const Cards = ComponentCard.map(joke => <Card className ="card" key ={joke.id} name={joke.name} id={joke.id}/>)
+   console.log(ComponentCard);
+   
     return (
         <div>
         <Header/>
